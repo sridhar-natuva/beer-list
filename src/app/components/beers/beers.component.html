@@ -1,0 +1,53 @@
+<div class="beers">
+    <ng-container *ngFor="let beer of beers">
+
+        <mat-card class="example-card">
+            <mat-card-header>
+                <img mat-card-avatar [src]="beerBrands[0]?.image" alt="Image Brand">
+                <mat-card-title>{{ beer?.name  }}</mat-card-title>
+                <mat-card-subtitle>{{ beer?.style }}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item> abv: {{ beer?.abv }} </mat-list-item>
+                    <mat-list-item> ibu: {{ beer?.ibu }} </mat-list-item>
+                    <mat-list-item> ounces: {{ beer?.ounces }} </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+
+
+    </ng-container>
+
+
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+</div>

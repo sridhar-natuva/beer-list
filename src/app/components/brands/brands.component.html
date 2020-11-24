@@ -1,0 +1,22 @@
+<div class="brands">
+    <ng-container *ngFor="let brand of beerBrands">
+
+        <mat-card class="example-card">
+            <mat-card-header>
+                <img mat-card-avatar [src]="brand?.image" alt="Image Brand">
+                <!-- <mat-card-title>{{ beer?.name  }}</mat-card-title>
+                <mat-card-subtitle>{{ beer?.style }}</mat-card-subtitle> -->
+            </mat-card-header>
+            <!-- <mat-list>
+                <mat-list-item> abv: {{ beer?.abv }} </mat-list-item>
+                <mat-list-item> ibu: {{ beer?.ibu }} </mat-list-item>
+                <mat-list-item> ounces: {{ beer?.ounces }} </mat-list-item>
+            </mat-list>
+            <mat-card-content>
+
+            </mat-card-content> -->
+        </mat-card>
+
+
+    </ng-container>
+</div>

@@ -1,0 +1,20 @@
+[
+    {
+        "plotNo":"11111000",
+        "plotId": "P001",
+        "user": null,
+        "dimentions": "30*45",
+        "status": "available"
+    },
+    {
+        "plotNo":"string",
+        "user": {
+            "name": "sridhar",
+            "phone":7893770014
+        },
+        "dimentions": "30*45",
+        "status": "booked"
+    }
+]
+
+
